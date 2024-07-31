@@ -3,6 +3,9 @@
 
 it will create gke cluster and enable workload identity on cluster and node level and also create gcp service account and assign permission on that service account...
 
+ # i have check with terraform  resource block for kubernetes serviceacount is not working. We can do with with gcloud command as well..
+  metadata 
+
 
     kubectl create serviceaccount gke-areez --namespace=default
     
@@ -14,3 +17,6 @@ it will create gke cluster and enable workload identity on cluster and node leve
     --namespace default \
     iam.gke.io/gcp-service-account=gke-areez@my-project-id.iam.gserviceaccount.com
     
+terraform init
+terraform plan
+terraform apply
